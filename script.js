@@ -1,4 +1,7 @@
 function min(arr) {
+  var i = arr.sort()
+return i.slice (0, 1)
+}
 
 }
 
