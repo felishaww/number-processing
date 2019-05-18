@@ -1,23 +1,39 @@
 function min(arr) {
   var i = arr.sort()
-return i.slice (0, 1)
+  return i.slice (0, 1)
 }
 
-}
 
 function max(arr) {
+  return arr.reduce(function (x, y)  {
+    return (x > y ? x : y)
+  } ) 
 
 }
 
 function mean(arr) {
+  
+    var jumlah = 0
+    for (i = 0; i < arr.length; i++) {
+      jumlah += arr[i]
+    }
+  
+  return jumlah / arr.length
 
 }
 
 function odds(arr) {
-
+  var odd = arr.filter (function getodd(m) {
+    return m % 2 === 1
+  })
+return odd.join('-')
 }
 
 function evens(arr) {
+  var even = arr.filter (function geteven(n) {
+    return n % 2 === 0
+  })
+return even.join('-')
 
 }
 
