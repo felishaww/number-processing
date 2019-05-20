@@ -18,7 +18,8 @@ function mean(arr) {
       jumlah += arr[i]
     }
   
-  return jumlah / arr.length
+  return Math.round(jumlah / arr.length)
+// cari lagi/explore itu math.round appan
 
 }
 
@@ -26,7 +27,8 @@ function odds(arr) {
   var odd = arr.filter (function getodd(m) {
     return m % 2 === 1
   })
-return odd.join('-')
+  .join('-')
+  return odd
 }
 
 function evens(arr) {
